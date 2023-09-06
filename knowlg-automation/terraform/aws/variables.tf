@@ -79,7 +79,7 @@ variable "destination_cidr" {
 variable "max_count" {
   type        = number
   description = "EKS node count."
-  default     = 2
+  default     = 4
 }
 variable "min_count" {
   type        = number
@@ -89,7 +89,7 @@ variable "min_count" {
 variable "desired_count" {
   type        = number
   description = "AKS node count."
-  default     = 1
+  default     = 2
 }
 
 variable "inst_type" {
@@ -182,7 +182,7 @@ variable "flink_release_name" {
   type        = list(string)
   description = "Flink helm release name."
   default     = ["search-indexer","audit-event-generator","asset-enrichment","post-publish-processor","dialcode-context-updater", "qrcode-image-generator","video-stream-generator","audit-history-indexer"]
-  # default     = ["merged-pipeline"]
+
 }
 
 variable "flink_namespace" {
